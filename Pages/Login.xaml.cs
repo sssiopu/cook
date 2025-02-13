@@ -21,36 +21,35 @@ namespace CookBook.Pages
     /// </summary>
     public partial class Login : Page
     {
-        public MainWindow _mainWindow;
-
-        public Login(MainWindow mainWindow)
+        public Login()
         {
             InitializeComponent();
-
-            mainWindow = _mainWindow;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (txtNewlogin.Text.Length > 0) 
+            try
             {
-                if (txtNewpassword.Text.Length > 0) 
-                {            
-                    DataTable dt_user = MainWindow.Select ("SELECT * FROM [dbo].[users] WHERE [login] = '" + txtNewlogin.Text + "' AND [password] = '" + txtNewpassword.Text + "'");
-                    if (dt_user.Rows.Count > 0)
-                    {
-                        MessageBox.Show("Пользователь авторизовался");    
-                    }
-                    else MessageBox.Show("Пользователя не найден");
+                var user = AppFrame.AppConnect.Model.Authors.FirstOrDefault(u => u.Login == txbNewlogin.Text && u.Password == txtNewpassword.Text);
+                if (user != null)
+                {
+                    MessageBox.Show($"Вы успешно вошли, {user.AuthorName}");
                 }
-                else MessageBox.Show("Введите пароль"); 
+                else
+                {
+                    MessageBox.Show($"Вы не вошли.");
+                }
             }
-            else MessageBox.Show("Введите логин"); 
+            catch 
+            {
+                MessageBox.Show("ППП");
+            }
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            mainWindow.OpenPage(MainWindow.Pages.regin);
+            AppFrame.MainFrame.FrameMain.Navigate(new regin());
         }
     }
 }
