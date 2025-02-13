@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="43ddcf972c4c4170b5cd1b9da2236588" Name="Diagram1" ZoomLevel="303">
+      <Diagram DiagramId="fc36d6c3839244879e3b61eb72daa90f" Name="Diagram1">
         <EntityTypeShape EntityType="CookBookModel.Authors" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="CookBookModel.Categories" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="CookBookModel.CookingSteps" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
@@ -13,7 +13,7 @@
         <EntityTypeShape EntityType="CookBookModel.RecipeIngredients" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
         <EntityTypeShape EntityType="CookBookModel.Recipes" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
         <EntityTypeShape EntityType="CookBookModel.RecipeTags" Width="1.5" PointX="8.25" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CookBookModel.Reviews" Width="1.5" PointX="6.125" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CookBookModel.Reviews" Width="1.5" PointX="5.25" PointY="15.25" IsExpanded="true" />
         <EntityTypeShape EntityType="CookBookModel.Tags" Width="1.5" PointX="6" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="CookBookModel.FK__Recipes__AuthorI__2A4B4B5E" ManuallyRouted="false" />
         <AssociationConnector Association="CookBookModel.FK__Recipes__Categor__29572725" ManuallyRouted="false" />

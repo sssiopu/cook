@@ -24,7 +24,7 @@ namespace CookBook
         public MainWindow()
         {
             InitializeComponent();
-            AppConnect.Model = new CookBookEntities();
+            AppConnect.Model = new CookBookEntities1();
             AppFrame.MainFrame.FrameMain = Basic;
             Basic.Navigate(new Pages.Login());
         }

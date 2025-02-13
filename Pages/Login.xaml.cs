@@ -30,19 +30,19 @@ namespace CookBook.Pages
         {
             try
             {
-                var user = AppFrame.AppConnect.Model.Authors.FirstOrDefault(u => u.Login == txbNewlogin.Text && u.Password == txtNewpassword.Text);
+                var user = AppFrame.AppConnect.Model.Authors.FirstOrDefault(u => u.Login == txtNewlogin.Text && u.Password == txtNewpassword.Text);
                 if (user != null)
                 {
                     MessageBox.Show($"Вы успешно вошли, {user.AuthorName}");
                 }
                 else
                 {
-                    MessageBox.Show($"Вы не вошли.");
+                    MessageBox.Show($"vi durak :P :3 ^o^ ^_^ (‿|‿)   (╥﹏╥) programma RIP † ");
                 }
             }
             catch 
             {
-                MessageBox.Show("ППП");
+                MessageBox.Show("vi durak :P :3 ^o^ ^_^ (‿|‿)   (╥﹏╥) programma RIP † ");
             }
             
         }
