@@ -25,9 +25,9 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBlock x:Name="txbNewlogin" HorizontalAlignment="Left" Margin="263,123,0,0" TextWrapping="Wrap" Text="Придумайте логин" VerticalAlignment="Top" RenderTransformOrigin="0.71,-1.817" Height="22" Width="127" Foreground="#FFB57BA8"/>
+        <TextBlock x:Name="txbNewlogin" HorizontalAlignment="Left" Margin="263,123,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" RenderTransformOrigin="0.71,-1.817" Height="22" Width="127" Foreground="#FFB57BA8"/>
         <TextBox x:Name="txtNewpassword" HorizontalAlignment="Left" Margin="263,233,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="261" Height="29" Background="White" BorderBrush="#FFECA7E9"/>
-        <TextBlock x:Name="txbNewpassword" HorizontalAlignment="Left" Margin="263,203,0,0" TextWrapping="Wrap" Text="Придумайте пароль" VerticalAlignment="Top" Height="22" Width="137" Foreground="#FFB57BA8"/>
+        <TextBlock x:Name="txbNewpassword" HorizontalAlignment="Left" Margin="263,203,0,0" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Top" Height="22" Width="137" Foreground="#FFB57BA8"/>
         <Button Content="Зарегестрироваться" HorizontalAlignment="Left" Margin="326,299,0,0" VerticalAlignment="Top" Height="41" Width="170" Foreground="#FFB57BA8" Background="#FFFFD9FA" BorderBrush="#FFECA7E9" Click="Button_Click_1"/>
         <Button Content="Войти" HorizontalAlignment="Left" Margin="326,351,0,0" VerticalAlignment="Top" Height="41" Width="170" Foreground="#FFB57BA8" Background="#FFFFD9FA" BorderBrush="#FFECA7E9" Click="Button_Click"/>
 
