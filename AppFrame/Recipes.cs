@@ -11,6 +11,7 @@ namespace CookBook.AppFrame
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     
     public partial class Recipes
     {
@@ -18,10 +19,10 @@ namespace CookBook.AppFrame
         public Recipes()
         {
             this.CookingSteps = new HashSet<CookingSteps>();
-            this.RecipeImages = new HashSet<RecipeImages>();
             this.RecipeIngredients = new HashSet<RecipeIngredients>();
             this.RecipeTags = new HashSet<RecipeTags>();
             this.Reviews = new HashSet<Reviews>();
+            this.RecipeImages = new HashSet<RecipeImages>();
         }
     
         public int RecipeID { get; set; }
@@ -30,19 +31,26 @@ namespace CookBook.AppFrame
         public Nullable<int> CategoryID { get; set; }
         public Nullable<int> AuthorID { get; set; }
         public Nullable<int> CookingTime { get; set; }
-        public string Image { get; set; }
-    
+        public string CurrentPhoto
+        {
+            get
+            {
+                if (RecipeImages == null) return "/Images/picture.png";
+                if (RecipeImages.Count == 0) return "/Images/picture.png";
+                return "/Images/" + RecipeImages.First().ImagePath;
+            }
+        }
         public virtual Authors Authors { get; set; }
         public virtual Categories Categories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CookingSteps> CookingSteps { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RecipeImages> RecipeImages { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RecipeIngredients> RecipeIngredients { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RecipeTags> RecipeTags { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Reviews> Reviews { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RecipeImages> RecipeImages { get; set; }
     }
 }

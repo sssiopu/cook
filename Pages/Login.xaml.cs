@@ -34,6 +34,7 @@ namespace CookBook.Pages
                 if (user != null)
                 {
                     MessageBox.Show($"Вы успешно вошли, {user.AuthorName}");
+                    AppFrame.MainFrame.FrameMain.Navigate(new Recepi());
                 }
                 else
                 {
@@ -49,7 +50,7 @@ namespace CookBook.Pages
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            AppFrame.MainFrame.FrameMain.Navigate(new regin());
+            AppFrame.MainFrame.FrameMain.Navigate(new Registration());
         }
     }
 }

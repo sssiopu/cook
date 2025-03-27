@@ -1,5 +1,4 @@
-﻿using CookBook.AppFrame;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,21 +16,13 @@ using System.Windows.Shapes;
 namespace CookBook
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для X.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class X : Page
     {
-        public MainWindow()
+        public X()
         {
             InitializeComponent();
-            AppConnect.Model = new CookBookEntities1();
-            AppFrame.MainFrame.FrameMain = Basic;
-            Basic.Navigate(new Pages.Login());
-        }
-
-        private void Basic_Navigated(object sender, NavigationEventArgs e)
-        {
-
         }
     }
 }

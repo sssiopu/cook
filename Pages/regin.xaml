@@ -9,6 +9,12 @@
       Title="regin">
 
     <Grid>
-        
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FFFF7ABD"/>
+                <GradientStop Color="White" Offset="1"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
     </Grid>
 </Page>

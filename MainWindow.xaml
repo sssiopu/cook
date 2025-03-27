@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Frame x:Name="Basic" Content="Frame" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="Basic" Content=")" NavigationUIVisibility="Hidden" Navigated="Basic_Navigated">
+            <Frame.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFFFCFF9"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </RadialGradientBrush>
+            </Frame.Background>
+        </Frame>
     </Grid>
 </Window>
